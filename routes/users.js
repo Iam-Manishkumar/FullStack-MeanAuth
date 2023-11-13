@@ -6,7 +6,6 @@ const config = require('../config/database');
 const User = require('../models/user');
 const Blog = require('../models/blog');
 const mongoose = require('mongoose')
-//const Blog = require('../models/blog');
 
 
 var ObjectId = mongoose.Types.ObjectId
