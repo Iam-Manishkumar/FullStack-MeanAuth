@@ -13,4 +13,4 @@ brew services stop mongodb-community@7.0
 
 npm install 
 
-node app.js
+node app.js s
