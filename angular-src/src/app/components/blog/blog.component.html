@@ -9,7 +9,7 @@
                       <a class="text-dark" href="#">{{ blog.title }}</a>
                     </h3>
                     <p class="card-text mb-auto">{{ blog.content | slice:0:200 }}...</p>
-                    <a [routerLink]="['/blog', blog._id]" [state]="{data: blog}">Continue reading</a>
+                    <a [routerLink]="['/blog', blog._id]" [state]="{data: blog}">Continue reading the blog</a>
                   </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                         <a class="text-dark" href="#">{{ blogs[i+1].title }}</a>
                     </h3>
                     <p class="card-text mb-auto">{{ blogs[i+1].content | slice:0:200 }}...</p>
-                    <a [routerLink]="['/blog', blogs[i+1]._id]" [state]="{data: blogs[i+1]}">Continue reading</a>
+                    <a [routerLink]="['/blog', blogs[i+1]._id]" [state]="{data: blogs[i+1]}">Continue reading the blog</a>
                     </div>
                 </div>
             </div>
