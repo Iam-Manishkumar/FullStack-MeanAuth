@@ -5,6 +5,7 @@ const cors = require("cors")
 const passport = require("passport")
 const mongoose = require("mongoose")
 const config = require('./config/database')
+//const config = require('./config/database')
 
 mongoose.connect(config.database)
 mongoose.connection.on('connected', () => {
@@ -33,7 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
     res.send("invalid endpoint")
 })
-
 
 
 app.get('*', (req, res) => {
