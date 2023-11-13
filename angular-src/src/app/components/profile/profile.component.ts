@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
     }
 
     this.profileService.updateAvatar(this.user, this.avatar).subscribe(data => {
-      this._flashMessagesService.show('Successfully updated avatar', {cssClass: 'alert-success', timeout: 3000});
+      this._flashMessagesService.show('Successfully updated the avatar', {cssClass: 'alert-success', timeout: 3000});
       window.location.reload()
     }, err => {
       console.log(err)
