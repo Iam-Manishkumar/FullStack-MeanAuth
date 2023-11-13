@@ -31,12 +31,12 @@ export class NewblogComponent implements OnInit {
     const user =  JSON.parse(localStorage.getItem('user'))
 
     if (!this.validateService.validateBlog(blog)) {
-      this._flashMessagesService.show('Please fill in all the fields of the blog', {cssClass: 'alert-danger', timeout: 3000});
+      this._flashMessagesService.show('Fill all the fields of the blog', {cssClass: 'alert-danger', timeout: 3000});
       return false
     }
     
     this.blogService.addNewBlog(blog, user).subscribe(data => {
-      this._flashMessagesService.show('Successfully added a new blog', {cssClass: 'alert-success', timeout: 3000});
+      this._flashMessagesService.show('Successfully added a blog', {cssClass: 'alert-success', timeout: 3000});
       this.router.navigate(['/blog'])
     }, err => {
       console.log(err)
